@@ -28,6 +28,12 @@ body {
   align-items: center;
 }
 
+.img-style {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* this is main css design  */
 .banner-image {
   position: absolute;
@@ -105,6 +111,12 @@ button {
 /* this is target section design  */
 .target-section {
   padding: 140px 0;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   .details-section {
     & h2 {
@@ -251,4 +263,168 @@ button {
 .copyright {
   color: #b2b1c3;
   padding-bottom: 20px;
+}
+
+/* responsive design for mobile  */
+@media only screen and (max-device-width: 767px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .between {
+    gap: 3rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .navbar {
+    margin: 0% 0;
+    gap: 20px;
+    padding: 16px;
+
+    & h3 {
+      font-size: 20px;
+    }
+
+    & div {
+      border-radius: 4px;
+      padding: 4px;
+      gap: 4px;
+
+      & img {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+
+  .banner-section {
+    padding: 60px 16px;
+
+    & h1 {
+      font-size: 40px;
+    }
+
+    & div {
+      padding: 16px 0;
+      font-size: 20px;
+
+      & img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  button {
+    border-radius: 8px;
+    padding: 14px 24px;
+  }
+
+  .banner-image {
+    width: 70dvw;
+  }
+
+  .target-section {
+    padding: 60px 16px;
+
+    .details-section {
+      & h2 {
+        font-size: 36px;
+      }
+
+      .details {
+        padding: 24px 0;
+        font-size: 16px;
+      }
+
+      .store-design {
+        gap: 12px;
+        padding: 12px 24px;
+        border-radius: 12px;
+
+        & h3 {
+          font-size: 16px;
+        }
+        & img {
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  .anywhere-section {
+    .bg-svg {
+      left: 0%;
+      top: 0%;
+      width: 100%;
+    }
+
+    .left-section {
+      & h2 {
+        font-size: 40px;
+      }
+      .image-grid {
+        padding-top: 40px;
+        padding-left: 50px;
+        gap: 16px;
+
+        & div {
+          width: 130px;
+          gap: 16px;
+        }
+        & div:nth-child(2) {
+          margin-top: 40px;
+        }
+      }
+    }
+
+    .right-section {
+      & h3 {
+        font-size: 24px;
+        padding-right: 0rem;
+      }
+      .details-div {
+        gap: 16px;
+        margin-top: 24px;
+
+        & div {
+          padding-top: 16px;
+          h2 {
+            font-size: 20px;
+          }
+          p {
+            font-size: 16px;
+            padding-top: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .join-section {
+    margin: 80px auto;
+    border-radius: 24px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    .details {
+      margin: 16px;
+    }
+
+    & h2 {
+      font-size: 40px;
+    }
+
+    .store-design {
+      gap: 12px;
+      padding: 12px 24px;
+      border-radius: 14px;
+
+      & h3 {
+        font-size: 16px;
+      }
+      & img {
+        width: 20px;
+      }
+    }
+  }
 }
